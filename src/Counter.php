@@ -180,7 +180,7 @@ class Counter
      */
     private static function hashVisitor()
     {
-        $cookie = Cookie::get(env('COUNTER_COOKIE', 'kryptonit3-counter'));
+        $cookie = Cookie::get(env('COUNTER_COOKIE', 'juanderpool-counter'));
         $visitor = ($cookie !== false) ? $cookie : $_SERVER['REMOTE_ADDR'];
 
         $ip = $_SERVER['REMOTE_ADDR'];
@@ -287,6 +287,4 @@ class Counter
 
         return number_format($page_record->visitors->count());
     }
-
-
 }
